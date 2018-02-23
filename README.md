@@ -1,7 +1,7 @@
 # alphat-third
 -Forked version of LineAlphat JS #DEV #22/12/2017 #18PM 
 
--LineAlphat -> https://github.com/alfathdirk/LineAlphatJS
+-LineAlphat -> https://github.com/bheghenkz/sayank-JS
 
 -Status: Very Good
 
@@ -15,7 +15,7 @@
 
 -How to run bot for the first time ?
 
--git clone https://github.com/CarTooonn/alphat-third
+-git clone https://github.com/bheghenkz/sayank-JS
 
 -cd alphat-third && npm install
 
