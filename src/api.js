@@ -55,7 +55,7 @@ class LineAPI {
     path: this.config.LINE_HTTP_URL,
     https: true
   }) {
-    options.headers['X-Line-Application'] = 'IOSIPAD\x097.14.0\x09iPhone_OS\x0910.12.0';
+    options.headers['X-Line-Application'] = 'CHROMEOS\t1.4.19\Chrome_OS\t1;
     this.options = options;
     this.connection =
       thrift.createHttpConnection(this.config.LINE_DOMAIN_3RD, 443, this.options);
@@ -98,7 +98,7 @@ class LineAPI {
   _qrCodeLogin() {
     this.setTHttpClient();
     return new Promise((resolve, reject) => {
-    this._client.getAuthQrcode(true, 'THIRD-PC',(err, result) => {
+    this._client.getAuthQrcode(true, 'JOFEN-PC',(err, result) => {
       const qrcodeUrl = `line://au/q/${result.verifier}`;
       qrcode.generate(qrcodeUrl,{small: true});
       console.info(`\n\nlink qr code is: ${qrcodeUrl}`)
@@ -119,7 +119,7 @@ class LineAPI {
                 this.options.headers['X-Line-Access'] = config.tokenn;
                 this.options.path = this.config.LINE_COMMAND_PATH;
                 this.setTHttpClient(this.options);
-			    this.options.headers['User-Agent'] = 'Line/6.0.0 iPad4,1 9.0.2';
+			    this.options.headers['User-Agent'] = 'Mozilla/5.0;
 			    this.axz = true;
 			    this.setTHttpClient(this.options);
 			    this.axz = false;
@@ -145,7 +145,7 @@ class LineAPI {
 				 reqx.password = rsaCrypto.credentials;
 				 reqx.keepLoggedIn = true;
 				 reqx.accessLocation = this.config.ip;
-				 reqx.systemName = 'THIRD-PC';
+				 reqx.systemName = 'JOFEN-PC';
 				 reqx.e2eeVersion = 0;
 				 try{
 					 this._client.loginZ(reqx,
