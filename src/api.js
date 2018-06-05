@@ -55,7 +55,7 @@ class LineAPI {
     path: this.config.LINE_HTTP_URL,
     https: true
   }) {
-    options.headers['X-Line-Application'] = 'DESKTOPWIN8.3.0NADYA_TJAx64';
+    options.headers['X-Line-Application'] = 'DESKTOPWIN8.3.0NADYA_TJx64';
     this.options = options;
     this.connection =
       thrift.createHttpConnection(this.config.LINE_DOMAIN_3RD, 443, this.options);
